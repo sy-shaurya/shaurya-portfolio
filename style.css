@@ -1,15 +1,17 @@
 
 /* =================================
-   SHAURYA — FUTURISTIC PORTFOLIO
+   SHAURYA — ONLY GOD KNOWS HOW MY CODE IS WORKING
 ================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-    --bg: #080812;
-    --purple: #a78bfa;
-    --text: #ffffff;
-    --muted: #aaa8bd;
+    --bg: #050505;
+    --surface: #101010;
+    --red: #ff1e35;
+    --red-dark: #a80016;
+    --white: #ffffff;
+    --muted: #999999;
 }
 
 * {
@@ -21,7 +23,7 @@
 
 body {
     background: var(--bg);
-    color: var(--text);
+    color: var(--white);
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
 }
@@ -40,10 +42,10 @@ nav {
     align-items: center;
     position: absolute;
     top: 0;
-    left: 0;
     z-index: 10;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-    backdrop-filter: blur(12px);
+    background: rgba(5,5,5,.75);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #ffffff12;
 }
 
 .logo {
@@ -54,11 +56,11 @@ nav {
 }
 
 .logo span {
-    color: var(--purple);
+    color: var(--red);
 }
 
 .nav-link {
-    color: var(--purple);
+    color: var(--red);
     font-size: 12px;
     letter-spacing: 3px;
     transition: .3s;
@@ -68,7 +70,7 @@ nav {
     color: white;
 }
 
-/* HERO SECTION */
+/* HERO */
 
 .hero {
     min-height: 100vh;
@@ -82,17 +84,17 @@ nav {
     background:
         radial-gradient(
             ellipse at 80% 50%,
-            rgba(124,58,237,.13),
+            rgba(255,20,40,.16),
             transparent 55%
         ),
-        var(--bg);
+        #050505;
 }
 
 .eyebrow {
-    color: var(--purple);
+    color: var(--red);
     font-size: 12px;
     letter-spacing: 5px;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 25px;
 }
 
@@ -106,7 +108,8 @@ nav {
 }
 
 .hero h1 span {
-    color: var(--purple);
+    color: var(--red);
+    text-shadow: 0 0 35px rgba(255,30,53,.25);
 }
 
 .subtitle {
@@ -122,7 +125,7 @@ nav {
 .explore {
     display: inline-block;
     color: white;
-    border: 1px solid var(--purple);
+    border: 1px solid var(--red);
     padding: 16px 25px;
     font-size: 12px;
     letter-spacing: 3px;
@@ -132,12 +135,12 @@ nav {
 }
 
 .explore:hover {
-    background: var(--purple);
-    color: #080812;
-    box-shadow: 0 0 30px rgba(167,139,250,.35);
+    background: var(--red);
+    color: white;
+    box-shadow: 0 0 30px rgba(255,30,53,.4);
 }
 
-/* GLOWING ORB */
+/* RED GLOW ORB */
 
 .orb {
     position: absolute;
@@ -148,11 +151,11 @@ nav {
     border-radius: 50%;
     background: radial-gradient(
         circle,
-        rgba(139,92,246,.45),
-        rgba(139,92,246,.05) 55%,
+        rgba(255,20,45,.4),
+        rgba(180,0,20,.08) 55%,
         transparent 70%
     );
-    filter: blur(15px);
+    filter: blur(18px);
     animation: float 6s ease-in-out infinite;
     pointer-events: none;
 }
@@ -166,12 +169,17 @@ nav {
     }
 }
 
-/* ABOUT SECTION */
+/* ABOUT */
 
 .about-section {
     padding: 110px 8%;
-    position: relative;
-    background: #080812;
+    background:
+        radial-gradient(
+            ellipse at 10% 30%,
+            rgba(255,20,40,.06),
+            transparent 45%
+        ),
+        #050505;
 }
 
 .about-section h2 {
@@ -181,7 +189,7 @@ nav {
 }
 
 .about-section h2 span {
-    color: var(--purple);
+    color: var(--red);
 }
 
 .about-intro {
@@ -192,7 +200,7 @@ nav {
     margin-bottom: 55px;
 }
 
-/* ABOUT CARDS */
+/* CARDS */
 
 .about-grid {
     display: grid;
@@ -202,20 +210,20 @@ nav {
 
 .about-card {
     padding: 32px;
-    border: 1px solid rgba(167,139,250,.2);
-    border-radius: 18px;
+    border: 1px solid rgba(255,30,53,.2);
+    border-radius: 16px;
     background: linear-gradient(
         145deg,
-        rgba(30,25,55,.8),
-        rgba(12,12,25,.95)
+        rgba(35,12,15,.85),
+        rgba(12,12,12,.98)
     );
     transition: .35s ease;
 }
 
 .about-card:hover {
     transform: translateY(-7px);
-    border-color: var(--purple);
-    box-shadow: 0 12px 40px rgba(124,58,237,.2);
+    border-color: var(--red);
+    box-shadow: 0 12px 40px rgba(255,20,45,.15);
 }
 
 .about-card h3 {
@@ -226,7 +234,7 @@ nav {
 }
 
 .about-card p {
-    color: var(--muted);
+    color: #aaa;
     font-size: 15px;
     line-height: 1.9;
 }
@@ -236,9 +244,9 @@ nav {
 .quote {
     margin-top: 65px;
     padding: 35px;
-    border-left: 3px solid var(--purple);
-    background: rgba(167,139,250,.06);
-    border-radius: 12px;
+    border-left: 3px solid var(--red);
+    background: rgba(255,30,53,.06);
+    border-radius: 10px;
     color: white;
     font-size: clamp(20px, 3vw, 30px);
     line-height: 1.6;
@@ -246,7 +254,7 @@ nav {
 
 .quote small {
     display: block;
-    color: var(--purple);
+    color: var(--red);
     margin-top: 18px;
     letter-spacing: 4px;
     font-size: 12px;
@@ -257,13 +265,13 @@ nav {
 footer {
     padding: 35px 15px;
     text-align: center;
-    color: #77778c;
-    border-top: 1px solid rgba(255,255,255,.08);
+    color: #777;
+    border-top: 1px solid #ffffff12;
     font-size: 12px;
     letter-spacing: 2px;
 }
 
-/* MOBILE RESPONSIVENESS */
+/* MOBILE */
 
 @media (max-width: 700px) {
 
@@ -312,6 +320,6 @@ footer {
         padding: 25px;
         font-size: 20px;
     }
-            }
-             
-            
+}
+
+    
