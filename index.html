@@ -1,118 +1,360 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<section id="about" class="about-section">
-    <div class="about-container">
+    <title>SHAURYA | Creative Developer</title>
+    <meta name="description" content="Shaurya — Creative Developer and Technology Enthusiast">
+
+    <!-- CSS CONNECTION -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Fallback styling in case style.css fails to load -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #080812;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            position: relative;
+            z-index: 5;
+            border-bottom: 1px solid #ffffff15;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        .logo span, .hero h1 span, .about-section h2 span {
+            color: #a78bfa;
+        }
+
+        .nav-link, .explore {
+            color: #a78bfa;
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-size: 12px;
+        }
+
+        .hero {
+            min-height: 90vh;
+            padding: 130px 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .eyebrow {
+            color: #a78bfa;
+            letter-spacing: 4px;
+            font-size: 12px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 10vw, 115px);
+            line-height: .95;
+            letter-spacing: -5px;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .subtitle {
+            color: #aaaabd;
+            font-size: 17px;
+            line-height: 1.8;
+            max-width: 500px;
+            margin-bottom: 35px;
+        }
+
+        .explore {
+            border: 1px solid #a78bfa;
+            padding: 15px 22px;
+            width: fit-content;
+            transition: .3s;
+        }
+
+        .explore:hover {
+            background: #a78bfa;
+            color: #080812;
+        }
+
+        .orb {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            right: 8%;
+            top: 25%;
+            border-radius: 50%;
+            background: radial-gradient(circle, #8b5cf6aa, #8b5cf600 70%);
+            filter: blur(15px);
+            animation: float 5s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-25px); }
+        }
+
+        .about-section {
+            padding: 100px 10%;
+            border-top: 1px solid #ffffff15;
+        }
+
+        .about-section h2 {
+            font-size: clamp(35px, 6vw, 65px);
+            margin-bottom: 20px;
+        }
+
+        .about-intro {
+            color: #aaaabd;
+            line-height: 1.8;
+            max-width: 750px;
+            margin-bottom: 50px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .about-card {
+            padding: 30px;
+            background: #ffffff08;
+            border: 1px solid #ffffff15;
+            border-radius: 15px;
+            transition: .35s;
+        }
+
+        .about-card:hover {
+            transform: translateY(-7px);
+            border-color: #a78bfa;
+            box-shadow: 0 10px 35px #8b5cf622;
+        }
+
+        .about-card h3 {
+            color: #a78bfa;
+            font-size: 21px;
+            margin-bottom: 18px;
+        }
+
+        .about-card p {
+            color: #aaaabd;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .quote {
+            margin-top: 55px;
+            padding: 35px;
+            border-left: 3px solid #a78bfa;
+            background: #ffffff08;
+            font-size: 23px;
+            line-height: 1.6;
+        }
+
+        .quote small {
+            display: block;
+            color: #a78bfa;
+            font-size: 12px;
+            letter-spacing: 3px;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px 15px;
+            color: #77778c;
+            border-top: 1px solid #ffffff15;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 700px) {
+            .hero {
+                padding: 100px 7%;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .orb {
+                width: 220px;
+                height: 220px;
+                right: -60px;
+                top: 30%;
+            }
+
+            .about-section {
+                padding: 75px 7%;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quote {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#" class="logo">SHAURYA<span>.</span></a>
+        <a href="#about" class="nav-link">EXPLORE ↗</a>
+    </nav>
+
+    <main class="hero">
+        <p class="eyebrow">WELCOME TO MY DIGITAL WORLD</p>
+
+        <h1>
+            CREATING<br>
+            <span>THE FUTURE.</span>
+        </h1>
+
+        <p class="subtitle">
+            Creative Developer & Technology Enthusiast.
+            Exploring ideas. Building experiences.
+            Moving towards tomorrow.
+        </p>
+
+        <a href="#about" class="explore">DISCOVER MORE ↓</a>
+
+        <div class="orb"></div>
+    </main>
+
+    <section id="about" class="about-section">
 
         <p class="eyebrow">01 / ABOUT ME</p>
+
         <h2>Ideas into <span>reality.</span></h2>
 
         <p class="about-intro">
-            I'm Shaurya, an ambitious learner, technology enthusiast,
+            I am Shaurya — an ambitious learner, technology enthusiast
             and aspiring innovator. I believe technology is more than
-            just tools and applications — it's a way to transform
-            imagination into reality.
+            just tools and applications. It is a way to transform
+            imagination into something meaningful.
         </p>
 
         <div class="about-grid">
 
             <article class="about-card">
-                <span class="card-number">01</span>
-                <h3>Who I Am</h3>
+                <h3>01. Who I Am — Beyond the Ordinary</h3>
                 <p>
-                    I am driven by curiosity, creativity, and the desire
-                    to continuously improve. I enjoy exploring new
-                    possibilities, challenging conventional thinking,
-                    and understanding how the digital world works.
-                    My goal is not simply to use technology, but to
-                    understand it, experiment with it, and contribute
-                    to building meaningful solutions.
+                    I am someone driven by curiosity, creativity and
+                    the desire to keep improving. I enjoy exploring
+                    new possibilities, understanding how things work
+                    and challenging myself to think differently.
+                    I believe every great idea begins with a question
+                    and every achievement begins with the courage
+                    to explore it.
                 </p>
             </article>
 
             <article class="about-card">
-                <span class="card-number">02</span>
-                <h3>My Journey</h3>
+                <h3>02. My Journey — Curiosity Into Creation</h3>
                 <p>
-                    My journey into technology begins with curiosity.
-                    I enjoy discovering how things work and turning
-                    ideas into practical experiences. Through web
-                    development, programming, and personal projects,
-                    I am developing my skills step by step. I believe
-                    every challenge and mistake offers an opportunity
-                    to learn something valuable.
+                    My journey into technology is built around learning,
+                    experimenting and creating. From exploring web
+                    development to discovering programming and digital
+                    projects, every experience gives me a new perspective.
+                    I see mistakes as opportunities to learn and challenges
+                    as opportunities to grow.
                 </p>
             </article>
 
             <article class="about-card">
-                <span class="card-number">03</span>
-                <h3>Technical Interests</h3>
+                <h3>03. Technical Interests — Exploring Tomorrow</h3>
                 <p>
-                    I am fascinated by artificial intelligence,
-                    autonomous systems, software engineering, and
-                    modern web development. I enjoy exploring intelligent
-                    systems, automation, responsive digital experiences,
-                    and emerging technologies. I am especially interested
-                    in understanding how AI, software, and autonomous
-                    technology can work together to solve real problems.
+                    My interests include artificial intelligence,
+                    autonomous systems, software engineering and web
+                    development. I am fascinated by intelligent systems,
+                    automation and the possibilities of combining
+                    technology with creativity to build useful
+                    digital experiences.
                 </p>
             </article>
 
             <article class="about-card">
-                <span class="card-number">04</span>
-                <h3>Leadership</h3>
+                <h3>04. Leadership — Beyond the Screen</h3>
                 <p>
-                    Beyond technology, I value communication,
-                    discipline, teamwork, and responsibility. As the
-                    Head Boy of my school, I have opportunities to
-                    represent students, coordinate activities, and
-                    contribute to my school community. My experiences
-                    as a monitor and prefect have taught me that
-                    leadership is about listening, taking responsibility,
-                    and leading through actions.
+                    Technology is not the only area where I want to grow.
+                    As my school's Head Boy, I have learned the importance
+                    of communication, discipline, teamwork and responsibility.
+                    My experiences as a monitor and prefect have taught me
+                    that leadership means listening, supporting others
+                    and setting a positive example.
                 </p>
             </article>
 
             <article class="about-card">
-                <span class="card-number">05</span>
-                <h3>My Philosophy</h3>
+                <h3>05. My Philosophy — Think. Build. Improve.</h3>
                 <p>
-                    My philosophy is simple: Think. Build. Improve.
-                    I believe in questioning ideas, exploring
-                    possibilities, turning concepts into projects,
-                    and continuously refining my work. Progress
-                    requires patience, consistency, and the courage
-                    to learn from mistakes. I would rather keep
-                    improving than become comfortable with what
-                    I already know.
+                    My personal philosophy is simple: Think. Build. Improve.
+                    Think beyond the obvious, turn ideas into real projects
+                    and improve through continuous learning. I believe
+                    consistency, patience and curiosity are essential
+                    for meaningful progress.
                 </p>
             </article>
 
             <article class="about-card">
-                <span class="card-number">06</span>
-                <h3>Future Vision</h3>
+                <h3>06. Future Vision — Building What Comes Next</h3>
                 <p>
-                    My vision is to grow into a capable technology
-                    professional and innovator. I aspire to explore
-                    advanced artificial intelligence, autonomous
-                    technologies, and software engineering while
-                    strengthening my foundations in programming,
-                    mathematics, and logical thinking. I want to
-                    create projects that combine functionality,
-                    creativity, and purpose, and contribute to
-                    solutions that make a meaningful difference.
+                    My vision is to continue developing my knowledge
+                    of technology and become an innovator who creates
+                    meaningful solutions. I want to explore artificial
+                    intelligence, autonomous technology, software
+                    engineering and new possibilities that can shape
+                    the future.
                 </p>
             </article>
 
         </div>
 
-        <div class="about-quote">
-            <p>
-                "I am not here just to observe the future.
-                I am here to learn how to build it."
-            </p>
-            <span>— SHAURYA</span>
+        <div class="quote">
+            "I am not here just to observe the future.
+            I am here to learn how to build it."
+            <small>— SHAURYA</small>
         </div>
 
-    </div>
-                    </section>
-                    
+    </section>
+
+    <footer>
+        © 2026 SHAURYA. ALL RIGHTS RESERVED.
+    </footer>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
+
+
