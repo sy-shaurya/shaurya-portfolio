@@ -1,36 +1,198 @@
 
-            
-/* ===== ABOUT ME SECTION ===== */
+/* =================================
+   SHAURYA — FUTURISTIC PORTFOLIO
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --bg: #080812;
+    --purple: #a78bfa;
+    --text: #ffffff;
+    --muted: #aaa8bd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAVIGATION */
+
+nav {
+    width: 100%;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    color: var(--purple);
+}
+
+.nav-link {
+    color: var(--purple);
+    font-size: 12px;
+    letter-spacing: 3px;
+    transition: .3s;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 100vh;
+    padding: 150px 10% 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            ellipse at 80% 50%,
+            rgba(124,58,237,.13),
+            transparent 55%
+        ),
+        var(--bg);
+}
+
+.eyebrow {
+    color: var(--purple);
+    font-size: 12px;
+    letter-spacing: 5px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 10vw, 120px);
+    line-height: .95;
+    font-weight: 900;
+    letter-spacing: -6px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 span {
+    color: var(--purple);
+}
+
+.subtitle {
+    max-width: 520px;
+    margin: 30px 0;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.9;
+    position: relative;
+    z-index: 2;
+}
+
+.explore {
+    display: inline-block;
+    color: white;
+    border: 1px solid var(--purple);
+    padding: 16px 25px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    transition: .3s;
+    position: relative;
+    z-index: 2;
+}
+
+.explore:hover {
+    background: var(--purple);
+    color: #080812;
+    box-shadow: 0 0 30px rgba(167,139,250,.35);
+}
+
+/* GLOWING ORB */
+
+.orb {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: 8%;
+    top: 25%;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(139,92,246,.45),
+        rgba(139,92,246,.05) 55%,
+        transparent 70%
+    );
+    filter: blur(15px);
+    animation: float 6s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-25px) scale(1.08);
+    }
+}
+
+/* ABOUT SECTION */
 
 .about-section {
     padding: 110px 8%;
     position: relative;
-    overflow: hidden;
     background: #080812;
-}
-
-.about-container {
-    max-width: 1200px;
-    margin: auto;
 }
 
 .about-section h2 {
     font-size: clamp(38px, 6vw, 65px);
     margin: 15px 0 25px;
-    color: #fff;
+    color: white;
 }
 
 .about-section h2 span {
-    color: #a78bfa;
+    color: var(--purple);
 }
 
 .about-intro {
     max-width: 750px;
-    color: #aaa8bd;
-    font-size: 18px;
+    color: var(--muted);
+    font-size: 17px;
     line-height: 1.9;
     margin-bottom: 55px;
 }
+
+/* ABOUT CARDS */
 
 .about-grid {
     display: grid;
@@ -39,68 +201,97 @@
 }
 
 .about-card {
-    position: relative;
     padding: 32px;
-    border: 1px solid rgba(167, 139, 250, 0.2);
+    border: 1px solid rgba(167,139,250,.2);
     border-radius: 18px;
     background: linear-gradient(
         145deg,
-        rgba(30, 25, 55, 0.8),
-        rgba(12, 12, 25, 0.95)
+        rgba(30,25,55,.8),
+        rgba(12,12,25,.95)
     );
-    transition: transform 0.35s ease,
-                border-color 0.35s ease,
-                box-shadow 0.35s ease;
+    transition: .35s ease;
 }
 
 .about-card:hover {
     transform: translateY(-7px);
-    border-color: #a78bfa;
-    box-shadow: 0 12px 40px rgba(124, 58, 237, 0.15);
-}
-
-.card-number {
-    color: #a78bfa;
-    font-size: 14px;
-    letter-spacing: 3px;
+    border-color: var(--purple);
+    box-shadow: 0 12px 40px rgba(124,58,237,.2);
 }
 
 .about-card h3 {
-    color: #fff;
-    font-size: 24px;
-    margin: 18px 0;
+    color: white;
+    font-size: 21px;
+    line-height: 1.5;
+    margin-bottom: 18px;
 }
 
 .about-card p {
-    color: #aaa8bd;
+    color: var(--muted);
     font-size: 15px;
     line-height: 1.9;
 }
 
-.about-quote {
+/* QUOTE */
+
+.quote {
     margin-top: 65px;
     padding: 35px;
-    text-align: center;
-    border-left: 3px solid #a78bfa;
-    background: rgba(167, 139, 250, 0.06);
+    border-left: 3px solid var(--purple);
+    background: rgba(167,139,250,.06);
     border-radius: 12px;
-}
-
-.about-quote p {
-    color: #fff;
+    color: white;
     font-size: clamp(20px, 3vw, 30px);
     line-height: 1.6;
 }
 
-.about-quote span {
+.quote small {
     display: block;
-    color: #a78bfa;
-    margin-top: 15px;
+    color: var(--purple);
+    margin-top: 18px;
     letter-spacing: 4px;
     font-size: 12px;
 }
 
+/* FOOTER */
+
+footer {
+    padding: 35px 15px;
+    text-align: center;
+    color: #77778c;
+    border-top: 1px solid rgba(255,255,255,.08);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
 @media (max-width: 700px) {
+
+    nav {
+        padding: 22px 6%;
+    }
+
+    .hero {
+        padding: 130px 7% 90px;
+        min-height: 90vh;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 12vw, 75px);
+        letter-spacing: -3px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    .orb {
+        width: 240px;
+        height: 240px;
+        right: -80px;
+        top: 35%;
+    }
+
     .about-section {
         padding: 75px 6%;
     }
@@ -113,7 +304,14 @@
         padding: 25px;
     }
 
-    .about-intro {
-        font-size: 16px;
+    .about-card h3 {
+        font-size: 19px;
     }
+
+    .quote {
+        padding: 25px;
+        font-size: 20px;
     }
+            }
+             
+            
