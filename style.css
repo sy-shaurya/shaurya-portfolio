@@ -1,0 +1,234 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #070707;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+::selection {
+    background: #ff1744;
+    color: white;
+}
+
+.loader {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: #070707;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.loader h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(35px, 8vw, 75px);
+    letter-spacing: 8px;
+}
+
+.loader h1 span,
+.logo span {
+    color: #ff1744;
+}
+
+.loader p {
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 5px;
+}
+
+.loader.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 800;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    border: 1px solid #333;
+    padding: 12px 20px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    border-color: #ff1744;
+    color: #ff1744;
+}
+
+.hero {
+    min-height: 100vh;
+    padding: 150px 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 80% 50%, #360b16 0%, transparent 45%),
+        #070707;
+}
+
+.eyebrow {
+    color: #ff365e;
+    font-size: 11px;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(48px, 9vw, 110px);
+    line-height: 1.1;
+    letter-spacing: -4px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 span {
+    color: transparent;
+    -webkit-text-stroke: 1px #ff1744;
+}
+
+.subtitle {
+    max-width: 450px;
+    color: #999;
+    line-height: 1.8;
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+.explore {
+    margin-top: 40px;
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 3px;
+    border-bottom: 1px solid #ff1744;
+    padding-bottom: 10px;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+.explore:hover {
+    color: #ff1744;
+    letter-spacing: 5px;
+}
+
+.orb {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    right: 10%;
+    top: 25%;
+    background: radial-gradient(circle, #ff1744 0%, #8b0926 25%, transparent 70%);
+    filter: blur(40px);
+    opacity: 0.25;
+    animation: pulse 5s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.8);
+        opacity: 0.15;
+    }
+    to {
+        transform: scale(1.2);
+        opacity: 0.4;
+    }
+}
+
+#about {
+    min-height: 65vh;
+    padding: 120px 10%;
+    background: #0c0c0c;
+}
+
+#about h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(35px, 6vw, 65px);
+    margin-bottom: 25px;
+}
+
+#about h2 span {
+    color: #ff1744;
+}
+
+#about > p:last-child {
+    color: #999;
+    line-height: 2;
+    max-width: 500px;
+}
+
+footer {
+    padding: 35px 10%;
+    text-align: center;
+    color: #666;
+    font-size: 10px;
+    letter-spacing: 3px;
+    border-top: 1px solid #222;
+}
+
+@media (max-width: 600px) {
+    nav {
+        padding: 25px 6%;
+    }
+
+    .hero {
+        padding: 130px 7%;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .orb {
+        width: 220px;
+        height: 220px;
+        right: -80px;
+        top: 35%;
+    }
+
+    #about {
+        padding: 90px 7%;
+    }
+}
